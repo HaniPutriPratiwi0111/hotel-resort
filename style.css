@@ -1,0 +1,381 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("images/imagess/kamar-hotel.png");
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    background-origin: content-box;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #20b2aa;
+}
+
+.navbar h1 {
+    color: white;
+    font-size: 24px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.book-now {
+    background-color: white;
+    color: #20b2aa;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+header {
+    background-image: url('header-background.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header h2 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+header .explore {
+    padding: 10px 20px;
+    background-color: white;
+    color: #20b2aa;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.booking-form {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.booking-form label {
+    margin-right: 10px;
+    color: white;
+    font-size: 1rem;
+}
+
+.booking-form input {
+    margin-right: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.booking-form button {
+    padding: 10px 20px;
+    background-color: #20b2aa;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.about {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: white;
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+.about .icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.about .icons .icon {
+    margin: 0 20px;
+    padding: 20px;
+    background-color: #20b2aa;
+    color: white;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.hotel::before {
+    content: "hotel";
+}
+
+.hotel-img {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "hotel kamar-hotel" "hotel2 hotel2";
+    gap: 16px;
+}
+
+.hotel-img img {
+    width: 100%;
+}
+
+.hotel-img-item {
+    position: relative;
+}
+
+.hotel-img-item:hover::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.hotel::before {
+    content: "work";
+}
+
+.hotel-img {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "work-3 work-2" "work-5 work-4";
+    gap: 16px;
+}
+
+.hotel-img img {
+    width: 100%;
+}
+
+.hotel-img-item {
+    position: relative;
+}
+
+.hotel-img-item:hover::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+#hotel {
+    grid-area: hotel;
+}
+
+#hotel:hover::after {
+    content: 'hotel';
+}
+
+#kamar-hotel {
+    grid-area: kamar-hotel;
+}
+
+#kamar-hotel:hover::after {
+    content: 'kamar hotel';
+}
+
+#hotel2 {
+    grid-area: hotel2;
+}
+
+#hotel2:hover::after {
+    content: 'pemandangan';
+}
+
+.premium-rooms {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 10%;
+    background-color: #f4f4f4;
+}
+
+.premium-rooms .room-info {
+    flex: 1;
+}
+
+.premium-rooms .room-info h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.premium-rooms .room-info p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.premium-rooms .room-info button {
+    padding: 10px 20px;
+    background-color: #20b2aa;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.premium-rooms img {
+    flex: 1;
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.testimonials {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: white;
+}
+
+.testimonials h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.testimonials blockquote {
+    font-size: 1.2rem;
+    color: #333;
+    max-width: 600px;
+    margin: 0 auto;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.testimonials p {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.blog {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+}
+
+.blog h3 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.blog .blog-post {
+    display: inline-block;
+    margin: 0 20px;
+    width: 250px;
+}
+
+.blog .blog-post img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.blog .blog-post h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.blog .blog-post p {
+    font-size: 1rem;
+    color: #555;
+}
+
+footer {
+    background-color: #20b2aa;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+footer h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+footer p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+footer button {
+    padding: 10px 20px;
+    background-color: white;
+    color: #20b2aa;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+    .home img {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    section::before {
+        left: -10px;
+        font-size: 64px;
+    }
+}
+
+@keyframes upDown {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
