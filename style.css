@@ -1,4 +1,8 @@
 * {
+    font-family: "Montserrat";
+}
+
+* {
     margin: 0;
     padding: 0;
 }
@@ -104,6 +108,11 @@ header .explore {
     cursor: pointer;
 }
 
+.book-now:hover {
+    background-color: #ffffff;
+    color: #1e90ff;
+}
+
 .about {
     text-align: center;
     padding: 50px 20px;
@@ -171,16 +180,17 @@ header .explore {
     justify-content: center;
     font-weight: 500;
     font-size: 24px;
+    transition: background-color 0,3s ease;
 }
 
 .hotel::before {
-    content: "work";
+    content: "";
 }
 
 .hotel-img {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "work-3 work-2" "work-5 work-4";
+    grid-template-areas: "hotel kamar-hotel" "hotel2 hotel2";
     gap: 16px;
 }
 
@@ -355,7 +365,7 @@ footer button {
 
 @media only screen and (max-width: 768px) {
     .home img {
-        width: 50%;
+        width: 100%;
     }
 }
 
