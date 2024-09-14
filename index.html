@@ -13,7 +13,7 @@
 <body>
     <div class="navbar">
         <h1>HOTEL</h1>
-        <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="collapse navbar-collapse" id="navbarNav"> 
         <ul class="navbar-nav ms-auto">
             <li class="nav-item">
                 <a class="nav-link" href="#home">Home</a>
@@ -29,50 +29,85 @@
             </li>
             <li class="nav-item"></li>
                 <a class="book-now" href="#book">Book Now</a>
-            </li>
-        </ul>
-        </div>
+            </ul>
+        </div> 
     </div>
-    <header>
-        <div>
+ 
+<header>
+    <div><br>
         <h3>Hotel & Resort</h3>    
         <h2>WELCOME TO HOTEL</h2>
         <button class="explore">Jelajahi</button><br>
-        <div>
-        </div>
+    </div>
+<section class="section__container booking__container">
+    <form action="/" class="booking__form">
     <div class="booking-form">
-        <form><br>
-            <label for="checkin">Check In</label>
+        <label for="checkin">Check In</label>
             <input type="date" id="checkin">
-            <label for="checkout">Check Out</label>
+
+        <label for="checkout">Check Out</label>
             <input type="date" id="checkout">
-            <label for="person">Person</label>
+
+        <label for="person">Person</label>
             <input type="number" id="person" min="1" value="1">
-            <label for="room">Room</label>
+
+        <label for="room">Room</label>
             <input type="number" id="room" min="1" value="1">
-            <button class="btn button" onclick="toggleDetail(event)">Book Now</button>
-            </form>
-        </div>
-    </header><br>
-    <section id="hote" class="hotel container"></section><br>
-        <div class="row d-flex align-items-center gap-5"><br>
-            <div class="col-12 col-md-5"><br>
+
+        <button class="btn button" onclick="toggleDetail(event)">Book Now</button>
+    </div>
+    </form> 
+</section>
+</header><br>
+
+    <!-- <section class="section__container booking__container">
+        <form action="/" class="booking__form">
+            <div class="input__group">
+                <span><i class="ri-calendar-2-fill"></i></span>
+                <div>
+                    <label for="check-in">CHECK-IN</label>
+                    <input type="text" placeholder="Check In" />
+                </div>
+            </div>
+            <div class="input__group"></div>
+                <span><i class="ri-calendar-2-fill"></i></span>
+                <div>
+                    <label for="check-out">CHECK-OUT</label>
+                    <input type="text" placeholder="Check Out" />
+                </div>
+                <div class="input__group">
+                    <span><i class="ri-user-2-fill"></i></span>
+                    <div>
+                        <label for="guest">CHECK IN</label>
+                        <input type="text" placeholder="Guest" />
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section> -->
+
+    <section class="hotel container">
+        <div class="row d-flex align-items-center gap-5">
+            <div class="col text-col">
                 <h2>WELCOME TO NAMA HOTEL AND RESORT</h2>
-                <p>With over 340 hotels worldwide, NH Hotel Group offers a wide variety of hotels catering for a perfect stay no matter where your destination.</p>
+                <p>With over 340 hotels worldwide, NH Hotel Group offers a wide variety of hotels catering for a perfect <br> stay no matter where your destination. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit <br> ut facilis, consequuntur minus modi quisquam reprehenderit voluptates repudiandae perspiciatis <br> magni minima delectus necessitatibus tempora? Quas, explicabo? Veritatis est quod laudantium.</p>
             </div>
-            <div class="col-12 col-md-6 hotel">
-                <div id="hotel" class="hotel-img-item">
-                    <img src="images/imagess/hotel.png" alt="hotel" height="300" width="300">
-                </div>
-                <div id="kamar-hotel" class="hotel-img-item">
-                    <img src="images/imagess/kamar-hotel.png" alt="kamar-hotel" height="300" width="300">
-                </div>
-                <div id="hotel2" class="hotel-img-item">
-                    <img src="images/imagess/hotel2.png" alt="hotel 2" height="250" width="300">
+            <div class="col hotel-img">
+                <div class="hotel-img-grid">
+                    <div class="hotel-img-item">
+                        <img src="images/imagess/hotel.png" alt="hotel" id="hotel" height="250" width="300">
+                    </div>
+                    <div class="hotel-img-item">
+                        <img src="images/imagess/kamar-hotel.png" alt="kamar hotel" id="kamar-hotel" height="250" width="300">
+                    </div>
+                    <div class="hotel-img-item full-width">
+                        <img src="images/imagess/hotel2.png" alt="hotel 2" id="hotel2" height="250" width="610">
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </section>    
+    
     <section class="about" id="about">
         <div class="icons">
             <div class="icon">
@@ -89,6 +124,7 @@
             </div>
         </div>
     </section>
+    
     <section class="premium-rooms" id="rooms">
         <div class="room-info">
             <h3>PREMIUM ROOMS</h3>
@@ -100,16 +136,23 @@
         </div>
         <img src="images/imagess/kamar-hotel.png" alt="Premium Room" width="300" height="300">
     </section>
-    <section class="testimonials">
-        <div>
-            <img src="images/imagess/potoroit.png" alt="potoroit" width="300" height="300">
+
+
+    <section class="testimonials container">
+        <div class="testimonial-content">
+            <div class="testimonial-image">
+                <img src="images/imagess/potoroit.png" alt="potoroit" width="300" height="300">
+            </div>
+            <div class="testimonial-text">
+                <h3>Testimonial para pengunjung kami</h3>
+                <blockquote>
+                    "With over 340 hotels worldwide, NH Hotel Group offers a wide variety of hotels catering for a perfect stay no matter where your destination."
+                </blockquote>
+                <p>- Hani Putri</p>
+            </div>
         </div>
-        <h3>Testimonial para pengunjung kami</h3>
-        <blockquote>
-            "With over 340 hotels worldwide, NH Hotel Group offers a wide variety of hotels catering for a perfect stay no matter where your destination."
-        </blockquote>
-        <p>-Hani Putri</p>
     </section>
+
     <section class="blog">
         <h4>Our Blog</h4>
         <h3>Berita dan Acara Terkini</h3>
@@ -134,5 +177,9 @@
         <p>Contact: (+62) 83851337564</p>
         <button>Contact Now</button>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
 </body>
 </html>

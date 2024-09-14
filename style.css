@@ -5,6 +5,17 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
 }
 
 body {
@@ -80,6 +91,23 @@ header .explore {
     font-size: 1.2rem;
 }
 
+.booking__container {
+    padding-block: 0;
+}
+
+.booking__form {
+    padding: 2rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #20b2aa;
+    border-radius: 10px;
+    transform: translateY(203%);
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
 .booking-form {
     display: flex;
     justify-content: center;
@@ -101,12 +129,12 @@ header .explore {
 
 .booking-form button {
     padding: 10px 20px;
-    background-color: #20b2aa;
-    color: white;
+    background-color: white;
+    color: #20b2aa;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-}
+} 
 
 .book-now:hover {
     background-color: #ffffff;
@@ -147,83 +175,80 @@ header .explore {
     border-radius: 5px;
 }
 
-.hotel::before {
-    content: "hotel";
+
+.hotel {
+    margin-top: 50px;
+}
+
+.text-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left; /* Tulisan tetap rata kiri */
 }
 
 .hotel-img {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "hotel kamar-hotel" "hotel2 hotel2";
-    gap: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Mengatur gambar berada di sisi kanan */
 }
 
-.hotel-img img {
-    width: 100%;
+.hotel-img-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Membuat dua kolom yang seimbang */
+    gap: 10px;
+    align-items: center;
+}
+
+.hotel-img-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hotel-img-item.full-width {
+    grid-column: span 2; /* Gambar terakhir akan mengambil seluruh lebar dua kolom */
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    justify-content: space-between;
+    padding: 100px;
+    text-align: justify;
 }
 
 .hotel-img-item {
     position: relative;
+    display: inline-block;
 }
 
 .hotel-img-item:hover::after {
     content: '';
-    width: 100%;
-    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 500;
-    font-size: 24px;
-    transition: background-color 0,3s ease;
-}
-
-.hotel::before {
-    content: "";
-}
-
-.hotel-img {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "hotel kamar-hotel" "hotel2 hotel2";
-    gap: 16px;
-}
-
-.hotel-img img {
-    width: 100%;
-}
-
-.hotel-img-item {
-    position: relative;
-}
-
-.hotel-img-item:hover::after {
-    content: '';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 500;
-    font-size: 24px;
+    font-size: 18px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 #hotel {
     grid-area: hotel;
-}
+} 
 
 #hotel:hover::after {
     content: 'hotel';
+    opacity: 1;
 }
 
 #kamar-hotel {
@@ -232,6 +257,7 @@ header .explore {
 
 #kamar-hotel:hover::after {
     content: 'kamar hotel';
+    opacity: 1;
 }
 
 #hotel2 {
@@ -240,18 +266,28 @@ header .explore {
 
 #hotel2:hover::after {
     content: 'pemandangan';
+    opacity: 1;
 }
+
+@media (min-width: 768px) {
+    .hotel-img {
+        flex-direction: column;
+    }
+}
+
 
 .premium-rooms {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: row;
     padding: 50px 10%;
     background-color: #f4f4f4;
 }
 
 .premium-rooms .room-info {
     flex: 1;
+    margin-left: 20px;
 }
 
 .premium-rooms .room-info h3 {
@@ -277,32 +313,74 @@ header .explore {
     flex: 1;
     max-width: 100%;
     border-radius: 10px;
+    margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+    .premium-rooms {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .premium-rooms img {
+        margin-bottom: 20px;
+    }
 }
 
 .testimonials {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: white;
+    margin: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
 }
 
-.testimonials h3 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+.testimonial-content {
+    display: flex;
+    gap: 20px;
+    align-items: center;
 }
 
-.testimonials blockquote {
-    font-size: 1.2rem;
-    color: #333;
+.testimonial-image img {
+    border-radius: 50%; /* Membuat gambar menjadi lingkaran */
+}
+
+.testimonial-text {
     max-width: 600px;
-    margin: 0 auto;
-    font-style: italic;
+    text-align: left;
+}
+
+.testimonial-text h3 {
+    font-size: 1.5rem;
     margin-bottom: 10px;
 }
 
-.testimonials p {
-    font-weight: bold;
-    font-size: 1rem;
+.testimonial-text blockquote {
+    font-style: italic;
+    color: #555;
+    margin: 10px 0;
+    padding-left: 20px;
+    border-left: 3px solid #ccc;
 }
+
+.testimonial-text p {
+    font-weight: bold;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .testimonial-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .testimonial-image img {
+        margin-bottom: 20px;
+    }
+}
+
 
 .blog {
     text-align: center;
